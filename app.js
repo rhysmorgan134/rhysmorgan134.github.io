@@ -23,8 +23,9 @@ buttonRel = function(name, event) {
 }
 
 setInterval(() => {
-    cpu = getRandomInt(cpu - 2, cpu + 4)
+    cpu = getRandomInt(cpu - 2, cpu + 3)
     if(cpu < 50) {cpu = 55}
+    if(cpu < 90) {cpu = 75}
     document.getElementById('cpu').innerHTML = cpu + "&#x2103"
     if(cpu > 65) {
         document.getElementById('cpu').style.color = "#b22222"
@@ -34,6 +35,8 @@ setInterval(() => {
         document.getElementById('temp').style.color = "#e1e1ff"
     }
 }, 500)
+
+
 
 function rgb2hex(rgb){
     rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
