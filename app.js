@@ -23,7 +23,7 @@ buttonRel = function(name, event) {
 }
 
 setInterval(() => {
-    cpu = getRandomInt(cpu - 2, cpu + 3)
+    cpu = getRandomInt(cpu - 2, cpu + 2)
     if(cpu < 50) {cpu = 55}
     if(cpu > 90) {cpu = 75}
     document.getElementById('cpu').innerHTML = cpu + "&#x2103"
