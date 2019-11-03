@@ -1,4 +1,4 @@
-
+var cpu = 60
 
 buttonPress = function(name, event) {
     var k = name
@@ -12,9 +12,28 @@ buttonPress = function(name, event) {
     }
 }
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+  }
+
 buttonRel = function(name, event) {
     console.log("released")
 }
+
+setInterval(() => {
+    cpu = getRandomInt(cpu - 2, cpu + 4)
+    if(cpu < 50) {cpu = 55}
+    document.getElementById('cpu').innerHTML = cpu + "&#x2103"
+    if(cpu > 65) {
+        document.getElementById('cpu').style.color = "#b22222"
+        document.getElementById('temp').style.color = "#b22222"
+    } else {
+        document.getElementById('cpu').style.color = "#e1e1ff"
+        document.getElementById('temp').style.color = "#e1e1ff"
+    }
+}, 500)
 
 function rgb2hex(rgb){
     rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
