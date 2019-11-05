@@ -45,8 +45,8 @@
                 </div>
                 <div class="buttonGroup">
                         <div class="buttonStack">
-                                <button class="buttonP" onclick="buttonPress('passUp')"><i class="material-icons md-48 red">keyboard_arrow_up</i></button>
-                                <button class="buttonP" onclick="buttonPress('passDown')"><i class="material-icons md-48 blue">keyboard_arrow_down</i></button>
+                                <button class="buttonP" onclick="buttonPressT('passUp')" id="passUp"><i class="material-icons md-48 red">keyboard_arrow_up</i></button>
+                                <button class="buttonP" onclick="buttonPressT('passDown')" id="passUp"><i class="material-icons md-48 blue">keyboard_arrow_down</i></button>
                         </div>
                         <div class="buttonStack">
                                 <button class="buttonP" onclick="buttonPress('fanUp')"><i class="material-icons">keyboard_arrow_up</i><i
@@ -56,8 +56,8 @@
                                                 class="material-icons">toys</i><i class="material-icons">keyboard_arrow_down</i></button>
                         </div>
                         <div class="buttonStack">
-                                <button class="buttonP" onclick="buttonPress('driverUp')"><i class="material-icons md-48 red">keyboard_arrow_up</i></button>
-                                <button class="buttonP" onclick="buttonPress('driverDown')"><i class="material-icons md-48 blue">keyboard_arrow_down</i></button>
+                                <button class="buttonP" onclick="buttonPressT('driverUp')" id='driverUp'><i class="material-icons md-48 red">keyboard_arrow_up</i></button>
+                                <button class="buttonP" onclick="buttonPressT('driverDown')" id='driverDown'><i class="material-icons md-48 blue">keyboard_arrow_down</i></button>
                         </div>
                 </div>
         </div>
@@ -87,7 +87,15 @@
                         <div class="indicator recirc" id='recirc'></div>
                 </div>
         </div>
-        <script type='text/javascript' src='./app.js'></script>
+        <div class="bottomRow" >
+        <div class="circle" id="pTemp">
+                <p class="tempText" id="passTempText">0.0</p> 
+        </div>
+        <div class="circle" id="pTemp">
+                <p class="tempText" id="driverTempText">0.0</p>
+        </div>
+        </div>
+        <script type='text/javascript' src='./app_0_0_2.js'></script>
 </body>
 
 </html>
